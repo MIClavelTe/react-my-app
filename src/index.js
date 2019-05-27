@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import HelloWorld from './components/HelloWorld'
+import Main from './containers/Main'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<HelloWorld name="Adriana" color="blue"/>, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
