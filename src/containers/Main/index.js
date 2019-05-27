@@ -3,6 +3,7 @@ import HelloWorld from '../../components/HelloWorld';
 import HelloWorld2 from '../../components/HelloWorld2';
 import Button from '../../components/Button';
 import NameForm from '../../components/NameForm'
+import InputForm from '../../components/InputForm';
 
 const Main = () => (
     <>
@@ -11,6 +12,7 @@ const Main = () => (
         <Button>Button</Button>
         <Button primary>Primary</Button>
         <NameForm />
+        <InputForm />
     </>
 )
 
