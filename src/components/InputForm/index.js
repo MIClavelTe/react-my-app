@@ -12,6 +12,8 @@ class InputForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        this.props.onBookAdd(this.state);
+        this.setState({value1: "", value2: ""});
     };
 
     render () {
