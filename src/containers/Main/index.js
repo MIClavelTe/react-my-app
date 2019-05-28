@@ -15,6 +15,17 @@ class Main extends React.Component {
         this.setState( {books: [...this.state.books, {title: book.value1, author: book.value2}] } )
     }
 
+    handleBookDelete = id => {
+        /*
+            this.setState((state, props) => {
+            return {counter: state.counter + props.step};
+            });
+        */
+        this.setState( state => (
+            { books: state.books.filter( (value, index) => index !== id ) }
+        ))
+    }
+
     render () {
         return (
             <>
@@ -25,7 +36,16 @@ class Main extends React.Component {
                 <NameForm />
                 <InputForm onBookAdd={this.handleBookAdd} />
                 {
-                    this.state.books.map( book => <Card title={book.title} author={book.author} /> )
+                    this.state.books.map( (book,index) => 
+                        <Card 
+                            key={index}
+                            title={book.title} 
+                            author={book.author}
+                            onBookDelete={this.handleBookDelete}
+                            bookIndex={index}
+                            // onBookDelete={()=>this.handleBookDelete(index)} 
+                        /> 
+                    )
                 }
             </>
         )
